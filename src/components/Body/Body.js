@@ -1,10 +1,9 @@
 import React from 'react'
 import Home from '../Home/Home'
 
-const body = () => {
+const body = (props) => {
   return (
     <div>
-      <Home />
     </div>
   )
 }
