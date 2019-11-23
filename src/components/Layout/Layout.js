@@ -15,11 +15,15 @@ class Layout extends Component {
   render() {
     return(
       <div>
-        <Navigation/>
+        <Navigation
+        showLinkHome={this.state.showLinkHome}
+        showLinkTopic={this.state.showLinkTopic}
+        />
         <Body
           showHome={this.state.showPageHome}
           showTopicSelection={this.state.showPageTopicSelection}
           showRoomSelection={this.state.showPageRoomSelection}
+
         />
       </div>
     )
