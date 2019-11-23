@@ -23,7 +23,7 @@ const body = (props) => {
       {/*SHOWING ROOM SELECTION PAGE*/}
       {
         props.showPageRoomSelection ?
-        <RoomSelection topics={props.topics} />
+        <RoomSelection topics={props.topics} functions={props.functions} />
         : null
       }
     </div>

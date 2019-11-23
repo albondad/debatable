@@ -130,3 +130,31 @@ button {
   font-size: 24px;
   font-weight: bold;
 }
+
+
+/*MODAL*/
+#modal-backdrop {
+  background-color: black;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: .75;
+}
+#modal-content {
+  background-color: white;
+  z-index: 200;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  width: 75%;
+  padding: 5%;
+  transform: translateX(-50%);
+  border: 4px var(--purple02) solid;
+}
+#modal-joinRoom {
+  margin: 32px 0px 20px 0px;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}

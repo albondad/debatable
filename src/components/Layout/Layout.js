@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import Navigation from '../Navigation/Navigation';
 import Body from '../Body/Body';
+import Modal from '../Modal/Modal'
 
 
 class Layout extends Component {
   state = {
+    showModal: false,
     showPageHome: true,
     showPageTopicSelection: false,
     showPageRoomSelection: false,
@@ -21,15 +23,30 @@ class Layout extends Component {
     this.setState({showPageHome: false, showPageTopicSelection: true, showPageRoomSelection: false});
   }
   showHome = () => {
-    this.setState({showPageHome: true, showPageTopicSelection: false, showPageRoomSelection: true});
+    this.setState({showPageHome: true, showPageTopicSelection: false, showPageRoomSelection: false});
   }
   showRoomSelection = () => {
     this.setState({showPageHome: false, showPageTopicSelection: false, showPageRoomSelection: true});
+  }
+  showModal = () => {
+    this.setState({showModal: true});
+  }
+  hideModal = () => {
+    this.setState({showModal: false});
   }
 
   render() {
     return(
       <div>
+        {
+          this.state.showModal ?
+          <Modal onClick={this.hideModal}>
+            <div id='modal-joinRoom'>JOIN ROOM</div>
+            <input placeholder='username'/>
+            <button>SUBMIT</button>
+          </Modal>
+          : null
+        }
         <Navigation
           showPageHome={this.state.showPageHome}
           functions={{
@@ -43,7 +60,8 @@ class Layout extends Component {
           showPageRoomSelection={this.state.showPageRoomSelection}
           topics={this.state.topics}
           functions={{
-            showRoomSelection: this.showRoomSelection
+            showRoomSelection: this.showRoomSelection,
+            showModal: this.showModal,
           }}
         />
       </div>

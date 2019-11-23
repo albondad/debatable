@@ -10,6 +10,7 @@ const rooms = (props) =>   {
         debators='debators'
         spectators='spectators'
         description='description'
+        onClick={props.functions.showModal}
       />
       <Room
         name='name 01'
