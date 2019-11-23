@@ -5,25 +5,40 @@ import Body from '../Body/Body';
 
 class Layout extends Component {
   state = {
-    showPageHome: false,
+    showPageHome: true,
     showPageTopicSelection: false,
     showPageRoomSelection: false,
-    showLinkHome: false,
-    showLinkTopic: false,
+    topics: [
+      {name: 'POLITICS', numberOfRooms: 0, numberOfUsers: 0},
+      {name: 'ECONOMICS', numberOfRooms: 0, numberOfUsers: 0},
+      {name: 'SPORTS', numberOfRooms: 0, numberOfUsers: 0},
+      {name: 'CURRENT EVENTS', numberOfRooms: 0, numberOfUsers: 0},
+      {name: 'TECHNOLOGY', numberOfRooms: 0, numberOfUsers: 0},
+    ],
+  }
+
+  showTopics = () => {
+    this.setState({showPageHome: false, showPageTopicSelection: true, showPageRoomSelection: false});
+  }
+  showHome = () => {
+    this.setState({showPageHome: true, showPageTopicSelection: false, showPageRoomSelection: true});
   }
 
   render() {
     return(
       <div>
         <Navigation
-        showLinkHome={this.state.showLinkHome}
-        showLinkTopic={this.state.showLinkTopic}
+          showPageHome={this.state.showPageHome}
+          functions={{
+            showTopics: this.showTopics,
+            showHome: this.showHome,
+          }}
         />
         <Body
-          showHome={this.state.showPageHome}
-          showTopicSelection={this.state.showPageTopicSelection}
-          showRoomSelection={this.state.showPageRoomSelection}
-
+          showPageHome={this.state.showPageHome}
+          showPageTopicSelection={this.state.showPageTopicSelection}
+          showPageRoomSelection={this.state.showPageRoomSelection}
+          topics={this.state.topics}
         />
       </div>
     )
