@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from '../Link/Link';
+import Auxiliary from '../Auxiliary/Auxiliary'
 
 const links = () => {
   return(
-    <div>
+    <Auxiliary>
       <Link name='Topics' />
-    </div>
+    </Auxiliary>
   )
 }
 

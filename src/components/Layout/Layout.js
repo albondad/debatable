@@ -10,6 +10,7 @@ class Layout extends Component {
     return(
       <div>
         <Navigation />
+        <Body />
       </div>
     )
   }

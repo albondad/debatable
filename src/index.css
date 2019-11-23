@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:100,300,400,700&display=swap');
 
 * {
   font-family: 'Muli', sans-serif;
@@ -12,14 +12,40 @@
 /*NAVIGATION*/
 #navigation {
   background-color: var(--purple01);
-  min-height: 10vh;
+  padding: 10px 0px 10px 0px;
 }
 #logo {
+  display: flex;
+  align-items: center;
+  padding-left: 10vh;
   color: white;
   font-weight: bold;
-  font-size: 80px;
+  font-size: 48px;
 }
 .link {
+  display: flex;
+  align-items: center;
+  padding-right: 10vh;
+  justify-content: flex-end;
+  height: 100%;
   color: white;
-  font-size: 60px;
+  font-size: 32px;
+}
+
+/*HOME*/
+#home-container {
+  padding-top: 128px;
+}
+#home-icon {
+  font-size: 256px;
+  color: var(--purple01);
+}
+#home-text01 {
+  font-size: 64px;
+  text-align: center;
+}
+#home-text02 {
+  font-size: 64px;
+  text-align: center;
+  font-weight: 100;
 }
