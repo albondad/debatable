@@ -7,7 +7,7 @@ const links = (props) => {
     <Auxiliary>
       {
         props.showPageHome ?
-        <Link name='Topics' onClick={props.functions.showTopics}/>
+        <Link name='Topics' onClick={props.functions.showTopicsSelection}/>
         : <Link name='Home' onClick={props.functions.showHome}/>
       }
 

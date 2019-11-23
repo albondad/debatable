@@ -1,16 +1,36 @@
-import React, {Component} from 'react';
+import React from 'react';
+import Room from '../Room/Room';
 
-class Rooms extends Component {
-  state = {
-  }
+const rooms = (props) =>   {
 
-  render() {
-    return(
-      <div>
-
-      </div>
-    )
-  }
+  return(
+    <div>
+      <Room
+        name='name 01'
+        debators='debators'
+        spectators='spectators'
+        description='description'
+      />
+      <Room
+        name='name 01'
+        debators='debators'
+        spectators='spectators'
+        description='description'
+      />
+      <Room
+        name='name 01'
+        debators='debators'
+        spectators='spectators'
+        description='description'
+      />
+      <Room
+        name='name 01'
+        debators='debators'
+        spectators='spectators'
+        description='description'
+      />
+    </div>
+  )
 }
 
-export default Rooms;
+export default rooms;

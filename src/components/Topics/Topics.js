@@ -1,7 +1,7 @@
 import React from 'react';
 import Topic from '../Topic/Topic'
 
-const topicSelection = (props) => {
+const topics = (props) => {
     return(
       <div class="w-80 m-auto">
         <div className="container-fluid  w-75 m-auto">
@@ -11,8 +11,7 @@ const topicSelection = (props) => {
               return (
                 <Topic
                   name={topic.name}
-                  numberOfRooms={topic.numberOfRooms}
-                  numberOfUsers={topic.numberOfUsers}
+                  onClick={props.functions.showRoomSelection}
                 />
               )
             })}
@@ -22,4 +21,4 @@ const topicSelection = (props) => {
     )
 }
 
-export default topicSelection;
+export default topics;

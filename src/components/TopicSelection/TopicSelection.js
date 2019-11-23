@@ -4,7 +4,7 @@ import Topics from '../Topics/Topics'
 const topicSelection = (props) => {
     return(
       <div>
-        <Topics topics={props.topics}/>
+        <Topics topics={props.topics} functions={props.functions}/>
       </div>
     )
 }

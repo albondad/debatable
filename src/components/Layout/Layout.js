@@ -17,11 +17,14 @@ class Layout extends Component {
     ],
   }
 
-  showTopics = () => {
+  showTopicsSelection = () => {
     this.setState({showPageHome: false, showPageTopicSelection: true, showPageRoomSelection: false});
   }
   showHome = () => {
     this.setState({showPageHome: true, showPageTopicSelection: false, showPageRoomSelection: true});
+  }
+  showRoomSelection = () => {
+    this.setState({showPageHome: false, showPageTopicSelection: false, showPageRoomSelection: true});
   }
 
   render() {
@@ -30,7 +33,7 @@ class Layout extends Component {
         <Navigation
           showPageHome={this.state.showPageHome}
           functions={{
-            showTopics: this.showTopics,
+            showTopicsSelection: this.showTopicsSelection,
             showHome: this.showHome,
           }}
         />
@@ -39,6 +42,9 @@ class Layout extends Component {
           showPageTopicSelection={this.state.showPageTopicSelection}
           showPageRoomSelection={this.state.showPageRoomSelection}
           topics={this.state.topics}
+          functions={{
+            showRoomSelection: this.showRoomSelection
+          }}
         />
       </div>
     )

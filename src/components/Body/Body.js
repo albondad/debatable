@@ -17,7 +17,13 @@ const body = (props) => {
       {/*SHOWING TOPIC SELECTION PAGE*/}
       {
         props.showPageTopicSelection ?
-        <TopicSelection topics={props.topics} />
+        <TopicSelection topics={props.topics} functions={props.functions} />
+        : null
+      }
+      {/*SHOWING ROOM SELECTION PAGE*/}
+      {
+        props.showPageRoomSelection ?
+        <RoomSelection topics={props.topics} />
         : null
       }
     </div>
