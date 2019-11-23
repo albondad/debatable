@@ -1,9 +1,10 @@
 import React from 'react'
-import Home from '../Home/Home'
-
-const body = (props) => {
+import TopicSelections from "../TopicSelections/TopicSelections"
+import RoomSelection from "../RoomSelection/RoomSelection"
+const body = () => {
   return (
     <div>
+    
     </div>
   )
 }
